@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./STYLES/normalize.css"> -->
+  <link rel="stylesheet" href="./STYLES/style.css">
+  <link rel="stylesheet" href="./dist/rpgui.css">
+  <title>Box-Shadow Generator</title>
+</head>
+
+<body>
+  <div class="rpgui-content rpgui-cursor-default" style="overflow-y: scroll;">
+
+    <div class="rpgui-container framed-golden" style="position:relative">
+
+
+      <header style="margin-bottom: 6%;">
+        <h1 style="font-size: 200%;filter: drop-shadow(2px 4px 4px gold);">
+          BOX - SHADOW GENERATOR
+        </h1>
+        <hr class="golden">
+        <h2 style="font-size: 110%;filter: drop-shadow(2px 4px 4px rgb(240, 232, 188));">
+          CSS generator for your web design
+        </h2>
+      </header>
+
+      <main>
+        <!-- Espacio del Shadow Properties -->
+
+        <section class="rpgui-container framed-grey ">
+          <h2 class="shadow-title">Box-Shadow Properties</h2>
+          <hr class="golden" style="width: 50%;">
+          <div class="rpgui-center framed props ">
+
+            <div class="column1">
+
+              <div>
+                <label for="">Horizontal Offset </label>
+                <input class="rpgui-cursor-point" type="range" id="horizontalOffset" min="-200" max="200" value="0">
+              </div>
+
+              <div class="shadow-properties">
+                <label for="">Vertical Offset</label>
+                <input class="rpgui-cursor-point" type="range" id="verticalOffset" min="-200" max="200" value="0">
+              </div>
+
+              <div class="shadow-properties">
+                <label for="">Blur Radius</label>
+                <input class="rpgui-cursor-point" type="range" id="blur" min="0" max="100" value="0">
+              </div>
+
+              <div class="shadow-properties">
+                <label for="">Spread Radius</label>
+                <input class="rpgui-cursor-point" type="range" id="spread" min="-100" max="100" value="0">
+              </div>
+
+            </div>
+
+
+            <div class="column2">
+
+              <div class="box-properties">
+                <label for="">Width </label>
+                <input class="rpgui-cursor-point" type="range" id="width" min="0" max="300" value="150">
+              </div>
+
+              <div class="box-properties">
+                <label for="">Height</label>
+                <input class="rpgui-cursor-point" type="range" id="height" min="0" max="300" value="150">
+              </div>
+
+              <div class="box-properties">
+                <label for="">Border Radius </label>
+                <input class="rpgui-cursor-point" type="range" id="border" min="0" max="100" value="0">
+              </div>
+
+              <div class="box-properties-color">
+                <label class="label-text-color" for="">Shadow Color</label>
+                <input class="box-color rpgui-cursor-point" type="color" id="shadowColor" value="black">
+              </div>
+
+              <div class="box-properties-color">
+                <label class="label-text-color" for="">Box Color</label>
+                <input class="box-color rpgui-cursor-point" type="color" id="boxColor">
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- Espacio del BOX-SHADOW -->
+
+        <article class="box-main rpgui-container framed-grey ">
+          <div class="box-show-prop">
+            <div class="square" id="centralBox"></div>
+          </div>
+
+          <div class="box-style">
+            <label>
+              <b style="font-size:115%;filter: drop-shadow(2px 4px 4px rgb(240, 230, 190));"> Box Shadow:
+              </b>
+              <span id="shadowStyle">
+                0px 0px 0px 0px #000000;
+              </span>
+            </label>
+
+            <button class="rpgui-button" id="copy"> Copy </button>
+          </div>
+
+        </article>
+
+      </main>
+
+      <footer class="foot-container">
+        <p class="foot">By Ariel M. ❤</p>
+      </footer>
+    </div>
+  </div>
+</body>
+<script src="./app.js"></script>
+<script src="./dist/rpgui.js"></script>
+
+</html>
